@@ -23,7 +23,7 @@ public class MinMaxCalculation {
             return;
         }
 
-        // Input integers
+        // Input valid int integers
         System.out.println("Input the numbers:");
         for (int i = 0; i < n; i++) {
             if (!scanner.hasNextInt()) {
@@ -34,9 +34,9 @@ public class MinMaxCalculation {
             int num = scanner.nextInt();
             numbers.add(num);
         }
-
+        //If there are no numbers entered the if loop will print this statement
         if (numbers.isEmpty()) {
-            System.out.println("No numbers entered.");
+            System.out.println("There are no numbers entered.");
             scanner.close();
             return;
         }
@@ -48,10 +48,11 @@ public class MinMaxCalculation {
         // Find minimum and maximum
         for (int i = 1; i < n; i++) {
             int num = numbers.get(i);
-
-            if (num < min) {
+            // This conditon checks for the min value and num is assigned to min
+            if (num < min) { 
                 min = num;
             }
+           // This conditon checks for the max value and num is assigned to max
             if (num > max) {
                 max = num;
             }
@@ -61,6 +62,6 @@ public class MinMaxCalculation {
         System.out.println("Minimum: " + min);
         System.out.println("Maximum: " + max);
 
-        scanner.close();
+        scanner.close(); 
     }
 }
