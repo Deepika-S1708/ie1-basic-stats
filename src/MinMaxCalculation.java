@@ -7,22 +7,10 @@ public class MinMaxCalculation {
         Scanner scanner = new Scanner(System.in);
         List<Integer> numbers = new ArrayList<>();
         
-        System.out.print("Enter the number of integers: ");
-        
-        if (!scanner.hasNextInt()) {
-            System.out.println("Invalid input. Please enter a valid integer.");
-            scanner.close();
-            return;
-        }
+        System.out.print("Enter the number of integers: ")
         
         int n = scanner.nextInt();
-
-        if (n <= 0) {
-            System.out.println("The entered number is invalid.");
-            scanner.close();
-            return;
-        }
-
+        
         // Input valid int integers
         System.out.println("Input the numbers:");
         for (int i = 0; i < n; i++) {
